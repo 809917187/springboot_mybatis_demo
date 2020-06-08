@@ -11,8 +11,8 @@
 
 	<div th:if="${not #lists.isEmpty(userList)}">
 
-		<div th:each="user,userStat:${userList}">
-			<ul>
+		<div>
+			<ul th:each="user,userStat:${userList}">
 				<li th:text="${user.name}"></li>
 			</ul>
 		</div>
