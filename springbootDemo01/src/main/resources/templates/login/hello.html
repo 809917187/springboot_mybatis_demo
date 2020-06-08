@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2 th:text="'Hello ' + ${name}"></h2>
+	<div th:text="${name}"></div>
+
+
+	<div th:if="${not #lists.isEmpty(userList)}">
+
+		<div th:each="user,userStat:${userList}">
+			<ul>
+				<li th:text="${user.name}"></li>
+			</ul>
+		</div>
+
+	</div>
+
+</body>
+</html>
