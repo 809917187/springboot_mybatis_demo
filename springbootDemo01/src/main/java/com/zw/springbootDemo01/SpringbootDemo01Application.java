@@ -3,13 +3,20 @@ package com.zw.springbootDemo01;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
 @MapperScan("com.zw.springbootDemo01.mapper")
-public class SpringbootDemo01Application {
+public class SpringbootDemo01Application extends SpringBootServletInitializer{
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringbootDemo01Application.class, args);
+	}
+	
+	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
+		return builder.sources(this.getClass());
+		
 	}
 
 }

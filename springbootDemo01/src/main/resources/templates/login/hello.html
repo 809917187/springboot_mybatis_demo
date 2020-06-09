@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
@@ -16,6 +16,16 @@
 				<li th:text="${user.name}"></li>
 			</ul>
 		</div>
+
+
+	<table st>
+		<tr>
+			<th>Name</th>
+		</tr>
+		<tr th:each="user:${userList}">
+			<td th:text="${user.name}"></td>
+		</tr>
+	</table>
 
 	</div>
 

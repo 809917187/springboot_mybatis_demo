@@ -12,6 +12,9 @@
 	<groupId>com.zw</groupId>
 	<artifactId>springbootDemo01</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<!-- <packaging>jar</packaging> -->
+
+
 	<name>springbootDemo01</name>
 	<description>Demo project for Spring Boot</description>
 
@@ -60,14 +63,24 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+		<dependency>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<version>3.8.1</version>
+		</dependency>
 	</dependencies>
 
 	<build>
+		<finalName>Demo01</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>com.zw.springbootDemo01.SpringbootDemo01Application</mainClass>
+				</configuration>
 			</plugin>
+			
 		</plugins>
 	</build>
 
